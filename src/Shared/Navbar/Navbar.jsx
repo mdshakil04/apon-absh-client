@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "../../assets/apon-abash2-preview.png";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="navbar shadow-sm">
+    <div className="navbar container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,10 +28,13 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link to="/property">View Properties</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -39,10 +43,13 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a>Item 3</a>
+            <Link to="/property">View Properties</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>

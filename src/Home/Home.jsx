@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from '../Shared/Navbar/Navbar';
+import { Outlet } from 'react-router-dom';
+import Banner from './Hero/Banner';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is Home</h1>
+            <Banner></Banner>
         </div>
     );
 };

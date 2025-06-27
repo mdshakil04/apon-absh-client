@@ -1,6 +1,3 @@
-import React from 'react';
-import Navbar from '../Shared/Navbar/Navbar';
-import { Outlet } from 'react-router-dom';
 import Banner from './Hero/Banner';
 import Featured from './Featured/Featured';
 import Info from './Info/Info';

@@ -4,7 +4,7 @@ import banner2 from "../../assets/images/banner/banner-02.jpg";
 import banner3 from "../../assets/images/banner/banner-03.jpg";
 const Banner = () => {
   return (
-    <div className="carousel w-full max-h-screen">
+    <div className="carousel w-full lg:h-[850px]">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={banner1} className="w-full" />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { GrSchedule } from "react-icons/gr";
 import logo from "../../assets/images/logo/apon-abash2-preview.png";
-
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,12 +35,16 @@ const Navbar = () => {
   );
   return (
     // className="navbar fixed font-bold rounded-xl"
-    <nav  className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-transparent bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}>
-      <div className=" text-white py-5 flex justify-between items-center">
+    <nav
+      className={`fixed  top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+        isScrolled
+          ? "bg-transparent bg-opacity-50 backdrop-blur-md shadow-md text-white"
+          : "bg-white "
+      }`}
+    >
+      <div className="  py-2 grid grid-cols-2 md:flex justify-between items-center">
         <div className="">
-          <img className="w-40" src={logo} alt="MD Shakil" />
+          <img className="lg:w-40 w-16" src={logo} alt="MD Shakil" />
         </div>
         <div className="navbar-start">
           <div className="dropdown">
@@ -73,7 +77,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 text-lg">{navLinks}</ul>
         </div>
         <div className="navbar-end ">
-          
+          <button className="btn bg-black rounded-4xl text-white border-black">
+            <GrSchedule />
+            Schedule a Visit
+          </button>
         </div>
       </div>
     </nav>
